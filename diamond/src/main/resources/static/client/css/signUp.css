@@ -1,0 +1,28 @@
+.sign-up{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.sign-up h4{
+    text-align: center;
+    margin: 0;
+}
+.sign-up button{
+    width: 450px;
+    margin: 10px 0px;
+    padding: 8px 0px;
+    border: none;
+    background-color: #f16c32;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.sign-up span{
+    font-size: 15px;
+}
+.sign-up a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #f16c32;
+    font-size: 15px;
+}

@@ -1,0 +1,178 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mona Gemify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/client/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+<header>
+    <div th:insert="~{/client/layout/header}"></div>
+</header>
+<nav style="display: inline;">
+    <div th:insert="~{/client/layout/menu}"></div>
+</nav>
+<section class="bg-banner-sp">
+    <div class="container">
+        <div class="content-center">
+            <h1>Sản phẩm</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="title-filter">
+            <div class="box-left">
+                <p>Hiển thị sản phẩm</p>
+            </div>
+            <div class="box-right">
+                <p>Sắp xếp: </p>
+                <select name="" id="">
+                    <option value="">Mặc định</option>
+                    <option value="">Phổ biến</option>
+                    <option value="">Đánh giá</option>
+                    <option value="">Mới nhất</option>
+                    <option value="">Giá thấp đến cao</option>
+                    <option value="">Giá cao xuống thấp</option>
+                </select>
+                |
+                <a href="" style="margin: 0px 10px;"><i class="fa-solid fa-table-list"></i></a>
+                <a href=""><i class="fa-solid fa-border-all"></i></a>
+            </div>
+        </div>
+        <hr style="margin: 0; margin-bottom: 1rem;">
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 banner-shop">
+                <img src="/client/image/banner-shop.png" alt="">
+                <div class="container-popular mt-5">
+                    <input type="checkbox" id="phobien">
+                    <label for="phobien">Phổ biến</label>
+                </div>
+                <hr>
+                <div class="container-sales">
+                    <input type="checkbox" id="khuyenmai">
+                    <label for="khuyenmai">Khuyến mãi</label>
+                </div>
+                <h4>Giá</h4>
+                <hr>
+                <p>
+                    <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;" disabled>
+                </p>
+
+                <div id="slider-range"></div>
+                <h4 class="mt-3">Danh mục</h4>
+                <hr>
+                <div class="container-category1">
+                    <input type="checkbox" id="Accessories">
+                    <label for="Accessories">Accessories</label>
+                </div>
+                <div class="container-category2">
+                    <input type="checkbox" id="Diamonds">
+                    <label for="Diamonds">Diamonds</label>
+                </div>
+                <div class="container-category3">
+                    <input type="checkbox" id="Earrings">
+                    <label for="Earrings">Earrings</label>
+                </div>
+                <div class="container-category4">
+                    <input type="checkbox" id="Giftsset">
+                    <label for="Giftsset">Gifts set</label>
+                </div>
+                <div class="container-category5">
+                    <input type="checkbox" id="Necklaces">
+                    <label for="Necklaces">Necklaces & Pendants</label>
+                </div>
+                <div class="container-category6">
+                    <input type="checkbox" id="Pearles">
+                    <label for="Pearles">Pearles</label>
+                </div>
+                <div class="container-category7">
+                    <input type="checkbox" id="Rings">
+                    <label for="Rings">Rings</label>
+                </div>
+                <div class="container-category8">
+                    <input type="checkbox" id="Wedding">
+                    <label for="Wedding">Wedding</label>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row card-sale">
+                    <div class="col-md-4" th:each="p: ${products}">
+                        <div class="card card-img">
+                            <a href="" class="img-relative" th:href="@{|/product/detail/${p.product_id}|}">
+                                <img class="show" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                                <img class="hide" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                            </a>
+                            <div class="content-option">
+                                <a>
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                            <p class="price" th:text="${p.price}"><del class="price-sale">3,200,000đ</del><del>đ</del></p>
+                            <p class="name-sale" th:text="${p.product_name}"></p>
+                            <p class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p class="sold">Đã bán hết: 17/100</p>
+                            <div class="progress progress-edit" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-orange" style="width: 25%"></div>
+                            </div>
+                            <div class="content-sale">
+                                <p class="salee">SALE</p>
+                                <p class="polular">PHỔ BIẾN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div th:insert="~{/client/layout/footer}"></div>
+
+
+<script src="/admin/js/shopping-cart.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/client/js/script.js"></script>
+</body>
+
+</html>

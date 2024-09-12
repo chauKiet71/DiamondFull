@@ -1,0 +1,502 @@
+
+<section>
+    <div class="container">
+        <div class="row" style="margin: 40px 0px;">
+            <div class="col-md-4">
+                <div class="row">
+                    <div style="width: 20%;">
+                        <i style="font-size: 40px;" class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div style="width: 80%;">
+                        <strong>Miễn phí nhận hàng</strong>
+                        <p>Với đơn hàng trên 10,000,000<del>đ</del></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div style="width: 20%;">
+                        <i style="font-size: 40px;" class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div style="width: 80%;">
+                        <strong>Thanh toán tối ưu</strong>
+                        <p>Bảo mật an toàn khi thanh toán</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div style="width: 20%;">
+                        <i style="font-size: 40px;" class="fa-solid fa-headset"></i>
+                    </div>
+                    <div style="width: 80%;">
+                        <strong>Hỗ trợ 24/7</strong>
+                        <p>Hỗ trợ tận tâm và nhiệt tình</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row banner-sp">
+            <div class="col-md-6 ">
+                <div class="card card-banner">
+                    <a href="">
+                        <img src="/client/image/banner-home1-01.png" alt="">
+                    </a>
+                    <div class="content-banner">
+                        <p>20% OFF</p>
+                        <h3>Nhẫn vàng <br> đính kim cương</h3>
+                        <a href="#">Khám phá</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-banner">
+                    <a href="">
+                        <img src="/client/image/banner-home1-02.png" alt="">
+                    </a>
+                    <div class="content-banner">
+                        <p>35% OFF</p>
+                        <h3>Phiên bản <br> FORGED Carbon</h3>
+                        <a href="#">Khám phá</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h3 style="font-size: 40px; margin-top: 40px;">Khuyễn mãi giới hạn</h3>
+        <hr>
+        <div class="row card-sale">
+            <div class="col-md-3" th:each="p: ${products1}">
+                <div class="card card-img">
+                    <a href="" class="img-relative" th:href="@{|/product/detail/${p.product_id}|}">
+                        <img class="show" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                        <img class="hide" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                    </a>
+                    <div class="content-option">
+                        <a>
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <p class="price" th:text="${p.price}"><del class="price-sale">3,200,000đ</del><del>đ</del></p>
+                    <p class="name-sale" th:text="${p.product_name}"></p>
+                    <p class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </p>
+                    <p class="sold">Đã bán hết: 17/100</p>
+                    <div class="progress progress-edit" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-orange" style="width: 25%"></div>
+                    </div>
+                    <div class="content-sale">
+                        <p class="salee">SALE</p>
+                        <p class="polular">PHỔ BIẾN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-all">
+            <a href="/product">Xem tất cả</a>
+        </div>
+    </div>
+</section>
+<section class="mt-5">
+    <div class="container">
+        <ul class="nav-menu-show">
+            <li>
+                <a href="">Bán chạy</a>
+            </li>
+            <li>
+                <a href="">Mới nhất</a>
+            </li>
+            <li>
+                <a href="">Khuyễn mãi</a>
+            </li>
+        </ul>
+        <div class="row card-sale mt-5">
+            <div class="col-md-3" th:each="p: ${products2}">
+                <div class="card card-img">
+                    <a href="" class="img-relative" th:href="@{|/product/detail/${p.product_id}|}">
+                        <img class="show" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                        <img class="hide" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                    </a>
+                    <div class="content-option">
+                        <a>
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <p class="price" th:text="${p.price}"><del class="price-sale">3,200,000đ</del><del>đ</del></p>
+                    <p class="name-sale" th:text="${p.product_name}"></p>
+                    <p class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </p>
+                    <p class="sold">Đã bán hết: 17/100</p>
+                    <div class="progress progress-edit" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-orange" style="width: 25%"></div>
+                    </div>
+                    <div class="content-sale">
+                        <p class="salee">SALE</p>
+                        <p class="polular">PHỔ BIẾN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-all">
+            <a href="/product">Xem tất cả</a>
+        </div>
+    </div>
+</section>
+<section class="mt-5" style="background-color: #f67541;">
+    <div class="container">
+        <h3 class="name-category-popular">Danh mục phổ biến</h3>
+        <div class="row list-category">
+            <div class="item-category">
+                <a href="">
+                    <img src="/client/image/cate-01.png" alt="">
+                </a>
+                <div class="content-item-category">
+                    <p class="name-item">Ring</p>
+                    <p class="quantity-item">7 sản phẩm</p>
+                </div>
+            </div>
+            <div class="item-category">
+                <a href="">
+                    <img src="/client/image/cate-02.png" alt="">
+                </a>
+                <div class="content-item-category">
+                    <p class="name-item">Earrings</p>
+                    <p class="quantity-item">7 sản phẩm</p>
+                </div>
+            </div>
+            <div class="item-category">
+                <a href="">
+                    <img src="/client/image/cate-03.png" alt="">
+                </a>
+                <div class="content-item-category">
+                    <p class="name-item">Pearles</p>
+                    <p class="quantity-item">7 sản phẩm</p>
+                </div>
+            </div>
+            <div class="item-category">
+                <a href="">
+                    <img src="/client/image/cate-04.png" alt="">
+                </a>
+                <div class="content-item-category">
+                    <p class="name-item">Wedding</p>
+                    <p class="quantity-item">7 sản phẩm</p>
+                </div>
+            </div>
+            <div class="item-category">
+                <a href="">
+                    <img src="/client/image/cate-05.png" alt="">
+                </a>
+                <div class="content-item-category">
+                    <p class="name-item">Accessories</p>
+                    <p class="quantity-item">7 sản phẩm</p>
+                </div>
+            </div>
+        </div>
+        <div class="row banner-sp banner-sp2">
+            <div class="col-md-8">
+                <div class="card card-banner">
+                    <a href="">
+                        <img src="/client/image/banner-home1-03.png" alt="">
+                    </a>
+                    <div class="content-banner">
+                        <p>BỘ SƯU TẬP</p>
+                        <h3>Dây chuyền Queen<br> Giảm 20%</h3>
+                        <a href="#">Khám phá</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-banner">
+                    <a href="">
+                        <img src="/client/image/banner-home1-04.png" alt="">
+                    </a>
+                    <div class="content-banner">
+                        <p>20% OFF</p>
+                        <h3>Nhẫn ngọc trai <br> ARDECO</h3>
+                        <a href="#">Khám phá</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background-image: url(/client/image/01/bg-home1-01.png);">
+    <div class="container">
+        <h3 class="product-popular">Sản phẩm phổ biến</h3>
+        <div class="row card-sale slick-card">
+            <div class="col-md-3" th:each="p: ${products3}">
+                <div class="card card-img">
+                    <a href="" class="img-relative" th:href="@{|/product/detail/${p.product_id}|}">
+                        <img class="show" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                        <img class="hide" th:src="@{|/diamond/images/${p.image}|}" alt="">
+                    </a>
+                    <div class="content-option">
+                        <a>
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <p class="price" th:text="${p.price}"><del class="price-sale">3,200,000đ</del><del>đ</del></p>
+                    <p class="name-sale" th:text="${p.product_name}"></p>
+                    <p class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </p>
+                    <p class="sold">Đã bán hết: 17/100</p>
+                    <div class="progress progress-edit" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-orange" style="width: 25%"></div>
+                    </div>
+                    <div class="content-sale">
+                        <p class="salee">SALE</p>
+                        <p class="polular">PHỔ BIẾN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-all">
+            <a href="/product">Xem tất cả</a>
+        </div>
+    </div>
+</section>
+<section
+        style="background-image: url(/client/image/01/bg-testi.jpg) ;background-repeat: no-repeat;background-position: center; background-size: cover;">
+    <div class="container">
+        <h3 class="evaluate-customer">Khách hàng đánh giá</h3>
+        <div class="row sclick-evaluate">
+            <div class="col-md-6">
+                <div class="evaluate-content">
+                    <div class="evaluate-top">
+                        <div class="row">
+                            <div class="evaluate-avatar">
+                                <img src="/client/image/testi-01.png" alt="">
+                            </div>
+                            <div class="evaluate-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evaluate-center">
+                        <h4>“Sản phẩm chất lượng”</h4>
+                        <p>Tôi đặc biệt ấn tượng với dịch vụ khách hàng
+                            chuyên nghiệp và chu đáo của họ. Họ luôn sẵn sàng tư vấn và
+                            giúp tôi tìm ra những món trang sức phù hợp với phong cách của tôi.
+                            Tôi chắc chắn sẽ tiếp tục mua sắm ở đây và giới thiệu cho bạn bè của mình.</p>
+                    </div>
+                    <div class="evaluate-bottom">
+                        <span>Nguyễn Thị Mai</span>
+                        <p>Khách hàng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="evaluate-content">
+                    <div class="evaluate-top">
+                        <div class="row">
+                            <div class="evaluate-avatar">
+                                <img src="/client/image/testi-01.png" alt="">
+                            </div>
+                            <div class="evaluate-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evaluate-center">
+                        <h4>“Sản phẩm chất lượng”</h4>
+                        <p>Tôi đặc biệt ấn tượng với dịch vụ khách hàng
+                            chuyên nghiệp và chu đáo của họ. Họ luôn sẵn sàng tư vấn và
+                            giúp tôi tìm ra những món trang sức phù hợp với phong cách của tôi.
+                            Tôi chắc chắn sẽ tiếp tục mua sắm ở đây và giới thiệu cho bạn bè của mình.</p>
+                    </div>
+                    <div class="evaluate-bottom">
+                        <span>Nguyễn Thị Mai</span>
+                        <p>Khách hàng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="evaluate-content">
+                    <div class="evaluate-top">
+                        <div class="row">
+                            <div class="evaluate-avatar">
+                                <img src="/client/image/testi-01.png" alt="">
+                            </div>
+                            <div class="evaluate-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evaluate-center">
+                        <h4>“Sản phẩm chất lượng”</h4>
+                        <p>Tôi đặc biệt ấn tượng với dịch vụ khách hàng
+                            chuyên nghiệp và chu đáo của họ. Họ luôn sẵn sàng tư vấn và
+                            giúp tôi tìm ra những món trang sức phù hợp với phong cách của tôi.
+                            Tôi chắc chắn sẽ tiếp tục mua sắm ở đây và giới thiệu cho bạn bè của mình.</p>
+                    </div>
+                    <div class="evaluate-bottom">
+                        <span>Nguyễn Thị Mai</span>
+                        <p>Khách hàng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="evaluate-content">
+                    <div class="evaluate-top">
+                        <div class="row">
+                            <div class="evaluate-avatar">
+                                <img src="/client/image/testi-01.png" alt="">
+                            </div>
+                            <div class="evaluate-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evaluate-center">
+                        <h4>“Sản phẩm chất lượng”</h4>
+                        <p>Tôi đặc biệt ấn tượng với dịch vụ khách hàng
+                            chuyên nghiệp và chu đáo của họ. Họ luôn sẵn sàng tư vấn và
+                            giúp tôi tìm ra những món trang sức phù hợp với phong cách của tôi.
+                            Tôi chắc chắn sẽ tiếp tục mua sắm ở đây và giới thiệu cho bạn bè của mình.</p>
+                    </div>
+                    <div class="evaluate-bottom">
+                        <span>Nguyễn Thị Mai</span>
+                        <p>Khách hàng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-01.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-02.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-03.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-04.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-05.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="/client/image/01/brand-06.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section
+        style="background-image: url(/client/image/bg-newsletter.jpg); background-repeat: no-repeat;background-position: center; background-size: cover;">
+    <div class="container">
+        <div class="newsletter">
+            <p class="sale">Giảm giá 500k cho đơn hàng đầu tiên</p>
+            <h5>Đăng ký email ngay</h5>
+            <p>
+                Phiếu giảm giá sẽ được gửi vào email của bạn trị giá <br>
+                500,000₫ khi đơn hàng đầu tên trên 5,000,000₫
+            </p>
+            <div class="box-email">
+                <form action="">
+                    <input type="text" placeholder="Nhập email...">
+                    <button>Đăng ký <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row payment">
+            <p><strong>Hoạt động: </strong>09:00-18:00 Từ thứ hai đến thứ 6</p>
+            <div class="payment-img">
+                <img src="/client/image/01/payment-1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <hr style="margin: 0;">
+</section>
+<section>
+    <div class="container">
+        <div class="row" style="margin: 40px 0px;">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="icon-sdt">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="content-sdt">
+                        <p>Bạn cần hỗ trợ</p>
+                        <h4>(+84) 0313728397</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 edit-img">
+                <img src="/client/image/mona-e1713322974119.png" alt="">
+            </div>
+            <div class=" col-md-4 icon-contact">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</section>

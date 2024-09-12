@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+;
+}
+.account-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.account-box-left {
+    display: flex; /* Hoặc display: block, tùy thuộc vào nhu cầu */
+    flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+    width: 250px; /* Đặt chiều rộng của menu bên trái */
+    background-color: #f4f4f4; /* Màu nền cho menu */
+    padding: 15px; /* Khoảng cách bên trong menu */
+}
+
+.account-box-left ul {
+    display: block; /* Đặt lại kiểu hiển thị của ul */
+    list-style-type: none; /* Xóa dấu chấm mặc định của danh sách */
+    padding: 0; /* Xóa khoảng cách bên trong danh sách */
+    margin: 0; /* Xóa lề mặc định */
+}
+
+.account-box-left ul li {
+    margin: 10px 0; /* Khoảng cách giữa các mục menu */
+}
+
+.account-box-right {
+    background-color: #f9f9f9; /* Màu nền cho biểu mẫu */
+}
+
+.account-box-left ul li a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #333; /* Màu chữ cho các liên kết */
+    display: block; /* Hiển thị liên kết như khối để dễ dàng điều chỉnh kích thước và khoảng cách */
+    padding: 10px; /* Khoảng cách bên trong các mục menu */
+    border-radius: 4px; /* Bo góc cho các mục menu */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.account-box-left ul li a:hover {
+    background-color: #ddd; /* Màu nền khi hover */
+}
+/* Toàn bộ biểu mẫu */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các phần tử của biểu mẫu */
+    max-width: 800px; /* Đặt chiều rộng tối đa của biểu mẫu */
+    margin: 0 auto; /* Căn giữa biểu mẫu trong khung */
+    padding: 20px; /* Khoảng cách bên trong biểu mẫu */
+    border-radius: 8px; /* Bo góc cho biểu mẫu */
+}
+
+/* Khung nội dung */
+.form-container {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các khối nội dung */
+    position: relative;
+    padding-bottom: 60px;
+}
+
+/* Khối nội dung bên trái */
+.content-left {
+    flex: 2; /* Chiếm 2 phần trong tổng số 3 phần */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+}
+
+/* Khối nội dung bên phải */
+.content-right {
+    flex: 1; /* Chiếm 1 phần trong tổng số 3 phần */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa hình ảnh và input */
+    gap: 15px; /* Khoảng cách giữa hình ảnh và input */
+}
+
+.content-right img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng khối */
+    border-radius: 8px; /* Bo góc cho hình ảnh */
+}
+
+.content-right input[type="file"] {
+    margin-top: 10px; /* Khoảng cách phía trên của input file */
+}
+
+/* Các nhãn */
+label {
+    display: block;
+    margin-bottom: 5px; /* Khoảng cách phía dưới của nhãn */
+    font-weight: bold; /* Làm cho văn bản nhãn đậm */
+}
+
+/* Các trường nhập liệu */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"] {
+    width: 100%; /* Chiếm toàn bộ chiều rộng khối chứa */
+    padding: 10px; /* Khoảng cách bên trong trường nhập liệu */
+    border: 1px solid #ccc; /* Đường viền cho trường nhập liệu */
+    border-radius: 4px; /* Bo góc cho trường nhập liệu */
+}
+
+/* Các nút bấm */
+button {
+    align-self: flex-start; /* Căn nút bấm về phía trái của khối chứa */
+    padding: 10px 20px; /* Khoảng cách bên trong nút bấm */
+    border: none; /* Xóa đường viền mặc định */
+    border-radius: 4px; /* Bo góc cho nút bấm */
+    background-color: #007bff; /* Màu nền cho nút bấm */
+    color: white; /* Màu chữ cho nút bấm */
+    cursor: pointer; /* Con trỏ khi di chuột lên nút bấm */
+    font-size: 16px; /* Kích thước chữ của nút bấm */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover lên nút bấm */
+}
+
+.content-right label{
+    font-weight: normal;
+}
+/* Nhãn cho input file */
+.file-upload-label {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eaedf1;
+    color: rgb(117, 111, 111);
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Ẩn input file thực tế */
+input[type="file"] {
+    display: none;
+}
+
+/* Các nút bấm */
+.form-container button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    align-self: flex-start; /* Căn nút bấm về phía trái của khối chứa */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

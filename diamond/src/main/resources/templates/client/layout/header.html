@@ -1,0 +1,68 @@
+<header>
+    <div class="container">
+        <ul>
+            <li class="logo">
+               <a href="/index">
+                   <img src="/client/image/mona-e1713322974119.png" alt="">
+               </a>
+            </li>
+            <li class="category">
+                <i class="fa-solid fa-list"></i>
+                <p>Danh mục sản phẩm</p>
+                <ul class="sub-menu">
+                    <li><a href=""><i class="fa-solid fa-hat-wizard" style="color: gray;"></i> ACCESSORIES</a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-gem" style="color: gray;"></i> DIAMONDS <i
+                            class="fa-solid fa-plus i-edit"></i></a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-up-down-left-right" style="color: gray;"></i> EARRINGS <i
+                            class="fa-solid fa-plus i-edit"></i></a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-gift" style="color: gray;"></i> GIFTS SET</a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-diamond" style="color: gray;"></i> PEARLES</a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-brands fa-rebel" style="color: gray;"></i> NECKLACES</a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-ring" style="color: gray;"></i> RINGS</a></li>
+                    <hr>
+                    <li style="margin-bottom: 10px;"><a href=""><i class="fa-solid fa-life-ring"
+                                                                   style="color: gray;"></i> WEDDING</a></li>
+                </ul>
+            </li>
+            <li class="search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm">
+                <a href="" style="color: black;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="box-right">
+                <a href="/login" class="btn-login"><i class="fa-regular fa-user"></i></a>
+                <div th:if="${session['loginAccount'] != null}" class="menu-account">
+                    <ul>
+                        <li><!--/*@thymesVar id="username" type=""*/-->
+                        <a th:href="@{|/user/profile/${username}|}">Tài khoản</a></li>
+                        <li><a href="">Thanh toán</a></li>
+                        <li><a href="/logout">Đăng xuất</a></li>
+                    </ul>
+                </div>
+                <a href="" class="position-relative">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                </a>
+                <a href="/cart/view" class="position-relative">
+                    <i class="fa-brands fa-opencart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
